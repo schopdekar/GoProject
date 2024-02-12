@@ -48,8 +48,8 @@ func GenerateSHA256(input string) string {
 	return hashString
 }
 
-func CreateChecksum(encodedBody, apiEndPoint, salt string) string {
-	sha256Value := GenerateSHA256(encodedBody + apiEndPoint + salt)
+func CreateChecksum(valueToBeEncrypted string) string {
+	sha256Value := GenerateSHA256(valueToBeEncrypted)
 	return sha256Value + "###" + "1"
 
 }

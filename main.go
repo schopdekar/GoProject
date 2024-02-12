@@ -51,6 +51,7 @@ func main() {
 	// router.HandleFunc("/items", GetItemsHandler).Methods("GET")
 	// router.HandleFunc("/items/{id}", GetItemHandler).Methods("GET")
 	router.HandleFunc("/initiatePayment", InitiatePayment).Methods("POST")
+	router.HandleFunc("/redirectedUser", RedirectedUser).Methods("POST")
 	http.Handle("/", router)
 
 	// Dummy data for testing
