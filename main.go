@@ -52,6 +52,7 @@ func main() {
 	// router.HandleFunc("/items/{id}", GetItemHandler).Methods("GET")
 	router.HandleFunc("/initiatePayment", InitiatePayment).Methods("POST")
 	router.HandleFunc("/redirectedUser", RedirectedUser).Methods("POST")
+	router.HandleFunc("/s2sCallback", S2SCallbackForPayment).Methods("POST")
 	http.Handle("/", router)
 
 	// Dummy data for testing
